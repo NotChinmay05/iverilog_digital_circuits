@@ -1,0 +1,56 @@
+$date
+	Tue Dec 09 00:13:31 2025
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module demux1to2_tb $end
+$var wire 4 ! out1 [3:0] $end
+$var wire 4 " out0 [3:0] $end
+$var reg 4 # in [3:0] $end
+$var reg 1 $ sel $end
+$scope module uut $end
+$var wire 4 % in [3:0] $end
+$var wire 1 $ sel $end
+$var wire 4 & out1 [3:0] $end
+$var wire 4 ' out0 [3:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+b1111 '
+b0 &
+b1111 %
+0$
+b1111 #
+b1111 "
+b0 !
+$end
+#10000
+b0 "
+b0 '
+b1111 !
+b1111 &
+1$
+#20000
+b11 "
+b11 '
+b0 !
+b0 &
+0$
+b11 #
+b11 %
+#30000
+b0 "
+b0 '
+b11 !
+b11 &
+1$
+#40000
