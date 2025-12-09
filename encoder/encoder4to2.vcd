@@ -1,0 +1,49 @@
+$date
+	Tue Dec 09 23:56:52 2025
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module encoder4to2_tb $end
+$var wire 2 ! dout [1:0] $end
+$var reg 4 " din [3:0] $end
+$scope module uut $end
+$var wire 4 # din [3:0] $end
+$var reg 2 $ dout [1:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+b0 $
+b1 #
+b1 "
+b0 !
+$end
+#5000
+b1 !
+b1 $
+b10 "
+b10 #
+#10000
+b10 !
+b10 $
+b100 "
+b100 #
+#15000
+b11 !
+b11 $
+b1000 "
+b1000 #
+#20000
+bx !
+bx $
+b110 "
+b110 #
+#35000
