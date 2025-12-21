@@ -1,0 +1,75 @@
+$date
+	Sun Dec 21 10:53:09 2025
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module struct_jkff_tb $end
+$var wire 1 ! Qbar $end
+$var wire 1 " Q $end
+$var reg 1 # J $end
+$var reg 1 $ K $end
+$var reg 1 % clk $end
+$scope module op $end
+$var wire 1 # J $end
+$var wire 1 $ K $end
+$var wire 1 " Q $end
+$var wire 1 ! Qbar $end
+$var wire 1 & R $end
+$var wire 1 ' S $end
+$var wire 1 % clk $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+0'
+0&
+0%
+0$
+0#
+x"
+x!
+$end
+#5
+1%
+#10
+0%
+1$
+#15
+x&
+1%
+#20
+0&
+0%
+0$
+1#
+#25
+x'
+1%
+#30
+0'
+0%
+1$
+#35
+x'
+x&
+1%
+#40
+0'
+0&
+0%
+#45
+x'
+x&
+1%
+#50
+0'
+0&
+0%

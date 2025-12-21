@@ -1,0 +1,74 @@
+#! /c/Source/iverilog-install/bin/vvp
+:ivl_version "12.0 (devel)" "(s20150603-1539-g2693dd32b)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "C:\iverilog\lib\ivl\system.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_sys.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_textio.vpi";
+:vpi_module "C:\iverilog\lib\ivl\v2005_math.vpi";
+:vpi_module "C:\iverilog\lib\ivl\va_math.vpi";
+S_000001fac271b7d0 .scope module, "df_basic_gates_tb" "df_basic_gates_tb" 2 1;
+ .timescale 0 0;
+v000001fac2636c80_0 .var "a", 0 0;
+v000001fac2636d20_0 .var "b", 0 0;
+v000001fac2636dc0_0 .net "y_and", 0 0, L_000001fac2636e60;  1 drivers
+v000001fac2602ce0_0 .net "y_not", 0 0, L_000001fac271b480;  1 drivers
+v000001fac2602d80_0 .net "y_or", 0 0, L_000001fac271b2f0;  1 drivers
+S_000001fac2603a50 .scope module, "op1" "and_gate_df" 2 7, 3 1 0, S_000001fac271b7d0;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "a";
+    .port_info 1 /INPUT 1 "b";
+    .port_info 2 /OUTPUT 1 "y";
+L_000001fac2636e60 .functor AND 1, v000001fac2636c80_0, v000001fac2636d20_0, C4<1>, C4<1>;
+v000001fac2603560_0 .net "a", 0 0, v000001fac2636c80_0;  1 drivers
+v000001fac271b960_0 .net "b", 0 0, v000001fac2636d20_0;  1 drivers
+v000001fac2603780_0 .net "y", 0 0, L_000001fac2636e60;  alias, 1 drivers
+S_000001fac2603be0 .scope module, "op2" "or_gate_df" 2 8, 3 9 0, S_000001fac271b7d0;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "a";
+    .port_info 1 /INPUT 1 "b";
+    .port_info 2 /OUTPUT 1 "y";
+L_000001fac271b2f0 .functor OR 1, v000001fac2636c80_0, v000001fac2636d20_0, C4<0>, C4<0>;
+v000001fac271b3e0_0 .net "a", 0 0, v000001fac2636c80_0;  alias, 1 drivers
+v000001fac271b250_0 .net "b", 0 0, v000001fac2636d20_0;  alias, 1 drivers
+v000001fac2603d70_0 .net "y", 0 0, L_000001fac271b2f0;  alias, 1 drivers
+S_000001fac2636a50 .scope module, "op3" "not_gate_df" 2 9, 3 17 0, S_000001fac271b7d0;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "a";
+    .port_info 1 /OUTPUT 1 "y";
+L_000001fac271b480 .functor NOT 1, v000001fac2636c80_0, C4<0>, C4<0>, C4<0>;
+v000001fac2603e10_0 .net "a", 0 0, v000001fac2636c80_0;  alias, 1 drivers
+v000001fac2636be0_0 .net "y", 0 0, L_000001fac271b480;  alias, 1 drivers
+    .scope S_000001fac271b7d0;
+T_0 ;
+    %vpi_call 2 12 "$dumpfile", "df_basic_gates.vcd" {0 0 0};
+    %vpi_call 2 13 "$dumpvars", 32'sb00000000000000000000000000000000, S_000001fac271b7d0 {0 0 0};
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v000001fac2636c80_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v000001fac2636d20_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v000001fac2636c80_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v000001fac2636d20_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v000001fac2636c80_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v000001fac2636d20_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v000001fac2636c80_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v000001fac2636d20_0, 0, 1;
+    %delay 10, 0;
+    %vpi_call 2 18 "$finish" {0 0 0};
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "df_basic_gates_tb.v";
+    "df_basic_gates.v";

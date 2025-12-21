@@ -1,0 +1,72 @@
+#! /c/Source/iverilog-install/bin/vvp
+:ivl_version "12.0 (devel)" "(s20150603-1539-g2693dd32b)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "C:\iverilog\lib\ivl\system.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_sys.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_textio.vpi";
+:vpi_module "C:\iverilog\lib\ivl\v2005_math.vpi";
+:vpi_module "C:\iverilog\lib\ivl\va_math.vpi";
+S_0000026dc6cbcee0 .scope module, "decoder_2to4_tb" "decoder_2to4_tb" 2 1;
+ .timescale 0 0;
+v0000026dc6b34190_0 .var "D0", 0 0;
+v0000026dc6b34230_0 .var "D1", 0 0;
+v0000026dc6b342d0_0 .net "Y0", 0 0, L_0000026dc6b34370;  1 drivers
+v0000026dc6b7eb10_0 .net "Y1", 0 0, L_0000026dc6b34820;  1 drivers
+v0000026dc6b7e890_0 .net "Y2", 0 0, L_0000026dc6b345f0;  1 drivers
+v0000026dc6b7e750_0 .net "Y3", 0 0, L_0000026dc6b34b30;  1 drivers
+S_0000026dc6cbd070 .scope module, "dut" "decoder_2to4" 2 6, 3 1 0, S_0000026dc6cbcee0;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "D0";
+    .port_info 1 /INPUT 1 "D1";
+    .port_info 2 /OUTPUT 1 "Y0";
+    .port_info 3 /OUTPUT 1 "Y1";
+    .port_info 4 /OUTPUT 1 "Y2";
+    .port_info 5 /OUTPUT 1 "Y3";
+L_0000026dc6cbbd50 .functor NOT 1, v0000026dc6b34190_0, C4<0>, C4<0>, C4<0>;
+L_0000026dc6cba330 .functor NOT 1, v0000026dc6b34230_0, C4<0>, C4<0>, C4<0>;
+L_0000026dc6b34370 .functor AND 1, L_0000026dc6cbbd50, L_0000026dc6cba330, C4<1>, C4<1>;
+L_0000026dc6b34820 .functor AND 1, L_0000026dc6cbbd50, v0000026dc6b34230_0, C4<1>, C4<1>;
+L_0000026dc6b345f0 .functor AND 1, v0000026dc6b34190_0, L_0000026dc6cba330, C4<1>, C4<1>;
+L_0000026dc6b34b30 .functor AND 1, v0000026dc6b34190_0, v0000026dc6b34230_0, C4<1>, C4<1>;
+v0000026dc6b03360_0 .net "D0", 0 0, v0000026dc6b34190_0;  1 drivers
+v0000026dc6b03580_0 .net "D0_bar", 0 0, L_0000026dc6cbbd50;  1 drivers
+v0000026dc6b030e0_0 .net "D1", 0 0, v0000026dc6b34230_0;  1 drivers
+v0000026dc6cba450_0 .net "D1_bar", 0 0, L_0000026dc6cba330;  1 drivers
+v0000026dc6cbbb70_0 .net "Y0", 0 0, L_0000026dc6b34370;  alias, 1 drivers
+v0000026dc6cbbc10_0 .net "Y1", 0 0, L_0000026dc6b34820;  alias, 1 drivers
+v0000026dc6cbbcb0_0 .net "Y2", 0 0, L_0000026dc6b345f0;  alias, 1 drivers
+v0000026dc6b340f0_0 .net "Y3", 0 0, L_0000026dc6b34b30;  alias, 1 drivers
+    .scope S_0000026dc6cbcee0;
+T_0 ;
+    %vpi_call 2 12 "$dumpfile", "decoder_2to4.vcd" {0 0 0};
+    %vpi_call 2 13 "$dumpvars", 32'sb00000000000000000000000000000000, S_0000026dc6cbcee0 {0 0 0};
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0000026dc6b34190_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0000026dc6b34230_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0000026dc6b34190_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0000026dc6b34230_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0000026dc6b34190_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0000026dc6b34230_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0000026dc6b34190_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0000026dc6b34230_0, 0, 1;
+    %delay 10, 0;
+    %vpi_call 2 20 "$finish" {0 0 0};
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    ".\decoder_2to4_tb.v";
+    ".\decoder_2to4.v";
