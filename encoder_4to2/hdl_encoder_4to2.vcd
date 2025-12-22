@@ -1,5 +1,5 @@
 $date
-	Sun Dec 21 11:50:32 2025
+	Sun Dec 21 19:55:37 2025
 $end
 $version
 	Icarus Verilog
@@ -7,7 +7,7 @@ $end
 $timescale
 	1s
 $end
-$scope module encoder_4to2_tb $end
+$scope module hdl_encoder_4to2_tb $end
 $var wire 1 ! Y1 $end
 $var wire 1 " Y0 $end
 $var reg 1 # D0 $end
@@ -19,8 +19,8 @@ $var wire 1 # D0 $end
 $var wire 1 $ D1 $end
 $var wire 1 % D2 $end
 $var wire 1 & D3 $end
-$var wire 1 " Y0 $end
-$var wire 1 ! Y1 $end
+$var reg 1 " Y0 $end
+$var reg 1 ! Y1 $end
 $upscope $end
 $upscope $end
 $enddefinitions $end

@@ -5,8 +5,15 @@ module jk_ff_beh (
     output reg Q,
     output reg Qbar
 );
-
+	
+   initial begin
+        Q = 0;
+        Qbar = 1;
+    end
+	
     always @(posedge clk) begin
+	Q = 1;
+	Qbar = 0;
         case ({J, K})
             2'b00: begin
                 Q    <= Q;        // Hold
@@ -26,5 +33,4 @@ module jk_ff_beh (
             end
         endcase
     end
-
 endmodule

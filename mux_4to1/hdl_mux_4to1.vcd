@@ -1,5 +1,5 @@
 $date
-	Sun Dec 21 11:42:56 2025
+	Sun Dec 21 20:08:25 2025
 $end
 $version
 	Icarus Verilog
@@ -7,7 +7,7 @@ $end
 $timescale
 	1s
 $end
-$scope module mux_4to1_tb $end
+$scope module hdl_mux_4to1_tb $end
 $var wire 1 ! Y $end
 $var reg 1 " I0 $end
 $var reg 1 # I1 $end
@@ -22,13 +22,7 @@ $var wire 1 $ I2 $end
 $var wire 1 % I3 $end
 $var wire 1 & S0 $end
 $var wire 1 ' S1 $end
-$var wire 1 ! Y $end
-$var wire 1 ( nS0 $end
-$var wire 1 ) nS1 $end
-$var wire 1 * w0 $end
-$var wire 1 + w1 $end
-$var wire 1 , w2 $end
-$var wire 1 - w3 $end
+$var reg 1 ! Y $end
 $upscope $end
 $upscope $end
 $enddefinitions $end
@@ -37,12 +31,6 @@ $dumpall
 $end
 #0
 $dumpvars
-0-
-0,
-0+
-0*
-1)
-1(
 0'
 0&
 1%
@@ -53,19 +41,12 @@ $dumpvars
 $end
 #10
 1!
-0(
-1+
 1&
 #20
 0!
-1(
-0+
-0)
 0&
 1'
 #30
 1!
-0(
-1-
 1&
 #40
